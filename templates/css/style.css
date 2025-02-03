@@ -1,0 +1,118 @@
+@media (min-width: 992px) {
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="cfdc1936-7ab0-b9d4-6902-3ca089f9b048"] {
+    opacity: 0;
+    width: 100%;
+    height: 0px;
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="c11f26e0-ebc5-f33b-f65a-40682cc6a160"] {
+    color: rgb(255, 255, 255);
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="52cfa8ba-ecac-1ba3-6741-b5dff02b376d"] {
+    background-color: rgba(51, 64, 104, 0.4);
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="11cd0f4b-48a6-271a-af24-04f4031d9be8"] {
+    color: rgba(51, 64, 104, 0.4);
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="cfdc1936-7ab0-b9d4-6902-3ca089f9b048"] {
+    opacity: 0;
+    width: 100%;
+    height: 0px;
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="c11f26e0-ebc5-f33b-f65a-40682cc6a160"] {
+    color: rgb(255, 255, 255);
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="52cfa8ba-ecac-1ba3-6741-b5dff02b376d"] {
+    background-color: rgba(51, 64, 104, 0.4);
+  }
+
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="11cd0f4b-48a6-271a-af24-04f4031d9be8"] {
+    color: rgba(51, 64, 104, 0.4);
+  }
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  /* make the container a flex container */
+  flex-direction: column;
+  /* make the container a column flex container */
+}
+
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 20;
+  left: 50;
+  width: 80vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.beer-slider[data-beer-label="after"]::after,
+.beer-reveal[data-beer-label="before"]::after {
+  padding: 5px 10px !important;
+  background: linear-gradient(to right, magenta, purple) !important;
+  color: white !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+}
+
+.beer-reveal {
+  width: 0%;
+  /* Set the initial width to 0% */
+  transition: width 0.15s;
+  /* Add a transition effect for the width change */
+}
+
+/* Hide label styles */
+.beer-slider.hide-after-label::after,
+.beer-reveal.hide-label::after {
+  display: none;
+}
+
+.beer-reveal[data-beer-label="before"]:not(.hide-label)::after {
+  left: 10px;
+}
+
+/* Custom class for the parent div */
+.nav-dropdown-toggle {
+  --hover-color: #ff00ff;
+  /* Color on hover */
+
+  /* Set the initial color */
+  color: var(--hover-color);
+}
+
+/* Change color of parent, text, and arrow on hover */
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:hover .nav-dropdown-arrow,
+.nav-dropdown-toggle:hover .w-dropdown-toggle {
+  color: var(--hover-color);
+}
