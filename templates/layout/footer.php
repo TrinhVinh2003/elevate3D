@@ -271,16 +271,19 @@ if (!defined('_CODE')) {
                         <div class="p2">Sign up for our newsletter to receive exclusive offers!</div>
                     </div>
                     <div class="w-form">
-                        <form id="email-form" name="email-form" data-name="Email Form" method="get"
+                        <form id="email-form2" name="email-form" data-name="Email Form"
                             data-wf-page-id="66887ffdf9d9902363189bbd"
                             data-wf-element-id="71a83289-e75b-c695-07cb-72e7000622e6"
                             data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
-                            <div class="newsletter-field"><img loading="lazy"
+                            <div class="newsletter-field">
+                                <img loading="lazy"
                                     src="https://cdn.prod.website-files.com/6671e2388ea2d8c788c04487/667de56e7ca82bcfa365b51e_Vector.svg"
-                                    alt="" class="image-16" /><input class="text-field w-input" maxlength="256"
+                                    alt="" class="image-16" />
+                                <input class="text-field w-input" maxlength="256"
                                     name="email-2" data-name="Email 2" placeholder="Insert Email Address" type="email"
-                                    id="email-2" required="" /><input type="submit" data-wait="Please wait..."
-                                    class="submit-button w-button" value="Submit" /></div>
+                                    id="email-3" required="" />
+                                <button type="button" id="send-email2" class="button-primary-blue w-button"> Submit </button>
+                            </div>
                         </form>
                         <div class="success-message w-form-done">
                             <div>Thank you! Your submission has been received!</div>

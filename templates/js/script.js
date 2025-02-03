@@ -113,6 +113,25 @@ $(document).ready(function () {
     console.log(phone);
     console.log(message);
 
+    if (name === "" || email === "" || phone === "" || message === "") {
+      alert("Vui lòng điền đầy đủ thông tin.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      alert("Vui lòng nhập địa chỉ email hợp lệ.");
+      return;
+    }
+
+    const phoneRegex = /(?:\+84|0084|0)[235789][0-9]{1,2}[0-9]{7}(?:[^\d]+|$)/g;
+
+    if (!phoneRegex.test(phone)) {
+      alert("Vui lòng nhập số điện thoại hợp lệ.");
+      return;
+    }
+
     $.ajax({
       type: "POST",
       url: "?module=user&action=send_email", // Đường dẫn tới file xử lý PHP
@@ -125,17 +144,50 @@ $(document).ready(function () {
       },
       success: function (response) {
         if (response.status === "success") {
-          $(".success-message").show();
-          $(".error-message").hide();
+          alert(response.message);
           $("#email-form")[0].reset();
         } else {
-          $(".error-message").show();
-          $(".success-message").hide();
+          alert(response.message);
         }
       },
       error: function () {
-        $(".error-message").show();
-        $(".success-message").hide();
+        alert("Có lỗi xảy ra khi gửi email.");
+      },
+    });
+  });
+});
+
+$(document).ready(function () {
+  $("#send-email2").on("click", function (e) {
+    e.preventDefault(); // Ngăn chặn hành động gửi form mặc định
+
+    var email = $("#email-3").val();
+
+    console.log(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      alert("Vui lòng nhập địa chỉ email hợp lệ.");
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "?module=user&action=send_email2", // Đường dẫn tới file xử lý PHP
+      dataType: "json",
+      data: {
+        email: email,
+      },
+      success: function (response) {
+        console.log(response.status);
+        if (response.status === "success") {
+          alert(response.message);
+        } else {
+          alert(response.message);
+        }
+      },
+      error: function () {
+        alert("Có lỗi xảy ra khi gửi email.");
       },
     });
   });

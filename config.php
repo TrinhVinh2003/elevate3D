@@ -9,12 +9,12 @@ const _ACTION = 'dashboard';
 const _CODE = true;
 
 // Thiết lập host
-define('_WEB_HOST', 'http://' . $_SERVER['HTTP_HOST'] . '/3Delevate');
+define('_WEB_HOST', 'http://' . $_SERVER['HTTP_HOST'] . '/elevate3D');
 define('_WEB_HOST_TEMPLATE', _WEB_HOST . '/templates');
 
 // Thiết lập path
 define('_WEB_PATH', __DIR__);
-define('_WEB_PATH_TEMPLATE', 'C:/xampp/htdocs/3Delevate/templates');
+define('_WEB_PATH_TEMPLATE', 'C:/xampp/htdocs/elevate3D/templates');
 
 // Thông tin kết nối
 const _HOST = 'localhost';
